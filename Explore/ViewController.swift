@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var locationInfo: UILabel!
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var locationManager: CLLocationManager = CLLocationManager()
+    var myLocation: CLLocation!
+    var (latitude, longitude) : (Double, Double) = (0.0, 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        myLocation = nil
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,18 +31,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    var i = 0
-    
-    @IBAction func pressButton(_ sender: UIButton) {
-        if i == 0 {
-            locationInfo.text = "(still nothing)"
-            i += 1
-        } else {
-            locationInfo.text = "(Nothing yet)"
-        }
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation])
+    {
+        let latestLocation: CLLocation = locations[locations.count - 1]
         
+        latitude = latestLocation.coordinate.latitude
+        longitude = latestLocation.coordinate.longitude
+        
+        if myLocation == nil {
+            myLocation = latestLocation
+        }
     }
     
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error) {
+        
+    }
+
 }
 
