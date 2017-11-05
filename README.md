@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-There are always times in your life when you don't know what to do and where to go. Why don't explore the secret neighborhood recommended by Abenteur? Your only goal is to reach the destination and win absolutely nothing. Just like what happens in life. 
+There are always times in your life when you don't know what to do and where to go. Why don't explore the secret places in your neighborhood with Abenteur? Who knows what awaits you at the destination? Abenteuer, meaning Adventure in German, is an iOS app that helps you explore your surroundings :D
 
 ## How to play
 
