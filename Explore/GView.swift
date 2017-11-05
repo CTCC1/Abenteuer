@@ -28,6 +28,7 @@ class GView: UIViewController, GMSPanoramaViewDelegate {
     func panoramaView(_ panoramaView: GMSPanoramaView, didMoveTo: GMSPanorama, nearCoordinate: CLLocationCoordinate2D) {
         destLat = nearCoordinate.latitude
         destLong = nearCoordinate.longitude
+        print(String(destLat) + "," + String(destLong))
     }
     
 }
