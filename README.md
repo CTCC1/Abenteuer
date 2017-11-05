@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-There are always times in your life when you don't know what to do and where to go. Why don't explore the secret places in your neighborhood with Abenteur? Who knows what awaits you at the destination? Abenteuer, meaning Adventure in German, is an iOS app that helps you explore your surroundings :D
+There are always times in your life when you don't know what to do and where to go. Why don't explore the secret places in your neighborhood with Abenteuer? Who knows what awaits you at the destination? Abenteuer, meaning Adventure in German, is an iOS app that helps you explore your surroundings :D
 
 ## How to play
 
@@ -25,7 +25,7 @@ This is the first App we built.
 
 How to develop iOS App using Swift. Implement module APIs  and SDKs. 
 
-## What's next for Abenteur
+## What's next for Abenteuer
 
 We will work on a scoreboard and a timer mode for each spot generated, so you can compete with other players on how familiar you are with your surroundings! We will also implement a "share button" to let the world see all the cool places our players have discovered!
 
