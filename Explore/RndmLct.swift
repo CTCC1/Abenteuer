@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 func is_in_range(latitude: Double, longitude: Double) -> Bool{
     var in_range = true
@@ -35,10 +36,7 @@ func random_location(_ latitude: Double,_ longitude: Double,_ latitudeRange: Dou
     var NewLongitude: Double = 181.0
     var dlat: Double = 0.0
     var dlon: Double = 0.0
-    var i: Int = 0
     while !is_in_range(latitude: NewLatitude, longitude: NewLongitude){
-        print("i = \(i)")
-        i += 1
         let time = UInt32(NSDate().timeIntervalSinceReferenceDate)
         srand48(Int(time))
         dlat = drand48() // random double between 0.0 and 1.0
@@ -49,4 +47,11 @@ func random_location(_ latitude: Double,_ longitude: Double,_ latitudeRange: Dou
         NewLongitude = longitude + dlon
     }
     return (NewLatitude, NewLongitude)
+}
+
+func compute_distance(_ InitLatitude: Double,_ InitLongitude: Double,_ CurrLatitude: Double,_ CurrLongitude: Double) -> Double {
+    let initial = CLLocation(latitude: InitLatitude, longitude: InitLongitude)
+    let current = CLLocation(latitude: CurrLatitude, longitude: CurrLongitude)
+    let dist : Double = current.distance(from: initial)
+    return dist
 }

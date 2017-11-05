@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,57 +20,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hr2-hB-aIN">
-                                <rect key="frame" x="10" y="60" width="355" height="307"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Hr2-hB-aIN" secondAttribute="height" multiplier="352:307" id="6y2-ag-ZpD"/>
-                                    <constraint firstAttribute="width" secondItem="Hr2-hB-aIN" secondAttribute="height" multiplier="343:299" id="dLO-H9-Ght"/>
-                                </constraints>
+                                <rect key="frame" x="10" y="60" width="355" height="323"/>
                                 <connections>
                                     <segue destination="pm4-Rs-KrM" kind="embed" id="YUy-aA-W5V"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-3o-seR">
-                                <rect key="frame" x="10" y="461" width="349" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Generate Location"/>
-                                <connections>
-                                    <action selector="generate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGe-Gp-aC6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nX-73-IIt">
-                                <rect key="frame" x="169" y="505" width="36.5" height="72"/>
+                                <rect key="frame" x="169" y="578" width="37" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.65092697538860111" green="0.65092697538860111" blue="0.65092697538860111" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f15-eL-Rbf">
-                                <rect key="frame" x="16" y="576" width="349" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-15-FfR">
+                                <rect key="frame" x="146" y="462" width="84" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1P6-Qt-8Zc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.6509269754" green="0.6509269754" blue="0.6509269754" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVc-3o-seR">
+                                <rect key="frame" x="97" y="534" width="180" height="36"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
+                                <state key="normal" title="Generate Panorama"/>
+                                <connections>
+                                    <action selector="generate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGe-Gp-aC6"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Diz-nh-hG2">
+                                <rect key="frame" x="10" y="426.5" width="349" height="2"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.65000000000000002"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FVc-3o-seR" secondAttribute="bottom" constant="170" id="30s-vZ-qvq"/>
-                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5XM-yX-06W"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6nX-73-IIt" secondAttribute="bottom" constant="90" id="9cV-29-UGs"/>
-                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="BfZ-7p-J0h"/>
-                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MX7-aX-j3z"/>
-                            <constraint firstItem="6nX-73-IIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBN-qZ-TWJ"/>
-                            <constraint firstItem="6nX-73-IIt" firstAttribute="top" secondItem="FVc-3o-seR" secondAttribute="bottom" constant="8" symbolic="YES" id="V0I-k4-WI7"/>
-                            <constraint firstItem="FVc-3o-seR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WgY-oQ-fbI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hr2-hB-aIN" secondAttribute="trailing" constant="10" id="fO2-2e-HIA"/>
-                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oHr-Yv-pY1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hr2-hB-aIN" secondAttribute="bottom" constant="300" id="qNH-F4-irQ"/>
-                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zCq-4S-3Ph"/>
+                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="5tM-nP-1xl"/>
+                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="centerX" secondItem="JtG-15-FfR" secondAttribute="centerX" id="Dtc-fC-22J"/>
+                            <constraint firstItem="FVc-3o-seR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JKa-ut-esj"/>
+                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LpG-LI-rxC"/>
+                            <constraint firstAttribute="bottom" secondItem="Hr2-hB-aIN" secondAttribute="bottom" constant="284" id="NPf-yK-NDs"/>
+                            <constraint firstItem="Diz-nh-hG2" firstAttribute="leading" secondItem="Hr2-hB-aIN" secondAttribute="leading" id="V5H-RJ-oLe"/>
+                            <constraint firstItem="JtG-15-FfR" firstAttribute="top" secondItem="Diz-nh-hG2" secondAttribute="bottom" constant="33.5" id="VCx-TR-Mf8"/>
+                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="centerX" secondItem="6nX-73-IIt" secondAttribute="centerX" id="ZxO-4E-926"/>
+                            <constraint firstItem="6nX-73-IIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="edj-cC-5D3"/>
+                            <constraint firstItem="JtG-15-FfR" firstAttribute="top" secondItem="Hr2-hB-aIN" secondAttribute="bottom" constant="79" id="fdx-Rc-9G8"/>
+                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="l4R-nP-8TZ"/>
+                            <constraint firstItem="Hr2-hB-aIN" firstAttribute="centerX" secondItem="FVc-3o-seR" secondAttribute="centerX" id="lZ9-ym-Mkn"/>
+                            <constraint firstItem="FVc-3o-seR" firstAttribute="top" secondItem="JtG-15-FfR" secondAttribute="bottom" constant="38" id="nJf-1u-a3e"/>
+                            <constraint firstItem="Diz-nh-hG2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uju-xU-6zT"/>
+                            <constraint firstItem="6nX-73-IIt" firstAttribute="top" secondItem="FVc-3o-seR" secondAttribute="bottom" constant="8" symbolic="YES" id="umv-KQ-0fy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ifWin" destination="f15-eL-Rbf" id="KGe-Tw-G2I"/>
+                        <outlet property="distInd" destination="JtG-15-FfR" id="M9d-ce-DfG"/>
                         <outlet property="location" destination="6nX-73-IIt" id="OAY-7V-2go"/>
+                        <outlet property="progress" destination="Diz-nh-hG2" id="sN3-HG-Arg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,7 +89,7 @@
             <objects>
                 <viewController id="pm4-Rs-KrM" customClass="GView" customModule="Explore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eEg-X0-rTU">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="307"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

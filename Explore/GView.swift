@@ -18,7 +18,7 @@ class GView: UIViewController, GMSMapViewDelegate {
         panoView.navigationGestures = false
         self.view = panoView
         
-        panoView.moveNearCoordinate(CLLocationCoordinate2D(latitude: 42.05342, longitude: -87.67248))
+        panoView.moveNearCoordinate(CLLocationCoordinate2D(latitude: newLat, longitude: newLong))
     }
     
 }

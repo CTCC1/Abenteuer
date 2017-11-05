@@ -17,7 +17,6 @@
 		9709E5EC1FADB43800478E39 /* ExploreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709E5EB1FADB43800478E39 /* ExploreUITests.swift */; };
 		97DBA67E1FAE56190033BD99 /* GView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA67D1FAE56190033BD99 /* GView.swift */; };
 		97DBA6821FAE59710033BD99 /* RndmLct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA6811FAE59710033BD99 /* RndmLct.swift */; };
-		97DBA6841FAE6F3B0033BD99 /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA6831FAE6F3B0033BD99 /* Win.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		9709E5ED1FADB43800478E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97DBA67D1FAE56190033BD99 /* GView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GView.swift; sourceTree = "<group>"; };
 		97DBA6811FAE59710033BD99 /* RndmLct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RndmLct.swift; sourceTree = "<group>"; };
-		97DBA6831FAE6F3B0033BD99 /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Win.swift; sourceTree = "<group>"; };
 		C56DB8B4F608A12F2CFDB3F3 /* Pods-Explore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Explore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Explore/Pods-Explore.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C43C3FFE18E5A0319D2EF /* libPods-Explore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Explore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,7 +133,6 @@
 				9709E5D41FADB43800478E39 /* LaunchScreen.storyboard */,
 				9709E5D71FADB43800478E39 /* Info.plist */,
 				97DBA6811FAE59710033BD99 /* RndmLct.swift */,
-				97DBA6831FAE6F3B0033BD99 /* Win.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 				97DBA6821FAE59710033BD99 /* RndmLct.swift in Sources */,
 				97DBA67E1FAE56190033BD99 /* GView.swift in Sources */,
 				9709E5CE1FADB43800478E39 /* ViewController.swift in Sources */,
-				97DBA6841FAE6F3B0033BD99 /* Win.swift in Sources */,
 				9709E5CC1FADB43800478E39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
