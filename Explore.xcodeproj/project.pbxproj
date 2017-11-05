@@ -12,12 +12,13 @@
 		9709E5CE1FADB43800478E39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709E5CD1FADB43800478E39 /* ViewController.swift */; };
 		9709E5D11FADB43800478E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9709E5CF1FADB43800478E39 /* Main.storyboard */; };
 		9709E5D31FADB43800478E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9709E5D21FADB43800478E39 /* Assets.xcassets */; };
-		9709E5D61FADB43800478E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9709E5D41FADB43800478E39 /* LaunchScreen.storyboard */; };
 		9709E5E11FADB43800478E39 /* ExploreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709E5E01FADB43800478E39 /* ExploreTests.swift */; };
 		9709E5EC1FADB43800478E39 /* ExploreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709E5EB1FADB43800478E39 /* ExploreUITests.swift */; };
 		97DBA67E1FAE56190033BD99 /* GView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA67D1FAE56190033BD99 /* GView.swift */; };
 		97DBA6821FAE59710033BD99 /* RndmLct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA6811FAE59710033BD99 /* RndmLct.swift */; };
 		97DBA6861FAECA940033BD99 /* title.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 97DBA6851FAECA930033BD99 /* title.JPG */; };
+		97DBA6881FAEDB520033BD99 /* Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA6871FAEDB520033BD99 /* Navigate.swift */; };
+		97DBA69A1FAEE5300033BD99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DBA6991FAEE5300033BD99 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		9709E5CD1FADB43800478E39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9709E5D01FADB43800478E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9709E5D21FADB43800478E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9709E5D51FADB43800478E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9709E5D71FADB43800478E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9709E5DC1FADB43800478E39 /* ExploreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExploreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9709E5E01FADB43800478E39 /* ExploreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTests.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		97DBA67D1FAE56190033BD99 /* GView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GView.swift; sourceTree = "<group>"; };
 		97DBA6811FAE59710033BD99 /* RndmLct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RndmLct.swift; sourceTree = "<group>"; };
 		97DBA6851FAECA930033BD99 /* title.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = title.JPG; sourceTree = "<group>"; };
+		97DBA6871FAEDB520033BD99 /* Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigate.swift; sourceTree = "<group>"; };
+		97DBA6991FAEE5300033BD99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C56DB8B4F608A12F2CFDB3F3 /* Pods-Explore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Explore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Explore/Pods-Explore.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C43C3FFE18E5A0319D2EF /* libPods-Explore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Explore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DBA69A1FAEE5300033BD99 /* MapKit.framework in Frameworks */,
 				3BE375A4FBE259FB7F49873E /* libPods-Explore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +100,7 @@
 		4BC4B19B29E851B93C3B5FF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97DBA6991FAEE5300033BD99 /* MapKit.framework */,
 				FD9C43C3FFE18E5A0319D2EF /* libPods-Explore.a */,
 			);
 			name = Frameworks;
@@ -131,9 +135,9 @@
 				9709E5CB1FADB43800478E39 /* AppDelegate.swift */,
 				9709E5CD1FADB43800478E39 /* ViewController.swift */,
 				97DBA67D1FAE56190033BD99 /* GView.swift */,
+				97DBA6871FAEDB520033BD99 /* Navigate.swift */,
 				9709E5CF1FADB43800478E39 /* Main.storyboard */,
 				9709E5D21FADB43800478E39 /* Assets.xcassets */,
-				9709E5D41FADB43800478E39 /* LaunchScreen.storyboard */,
 				9709E5D71FADB43800478E39 /* Info.plist */,
 				97DBA6811FAE59710033BD99 /* RndmLct.swift */,
 			);
@@ -231,6 +235,11 @@
 						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = M847YHH86P;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9709E5DB1FADB43800478E39 = {
 						CreatedOnToolsVersion = 9.1;
@@ -269,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9709E5D61FADB43800478E39 /* LaunchScreen.storyboard in Resources */,
 				9709E5D31FADB43800478E39 /* Assets.xcassets in Resources */,
 				97DBA6861FAECA940033BD99 /* title.JPG in Resources */,
 				9709E5D11FADB43800478E39 /* Main.storyboard in Resources */,
@@ -355,6 +363,7 @@
 				97DBA6821FAE59710033BD99 /* RndmLct.swift in Sources */,
 				97DBA67E1FAE56190033BD99 /* GView.swift in Sources */,
 				9709E5CE1FADB43800478E39 /* ViewController.swift in Sources */,
+				97DBA6881FAEDB520033BD99 /* Navigate.swift in Sources */,
 				9709E5CC1FADB43800478E39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,14 +406,6 @@
 				9709E5D01FADB43800478E39 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9709E5D41FADB43800478E39 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9709E5D51FADB43800478E39 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -524,9 +525,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M847YHH86P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Explore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks ~/Downloads/FacebookSDK";
 				PRODUCT_BUNDLE_IDENTIFIER = icosahedron.Explore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -541,9 +546,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M847YHH86P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Explore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks ~/Downloads/FacebookSDK";
 				PRODUCT_BUNDLE_IDENTIFIER = icosahedron.Explore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

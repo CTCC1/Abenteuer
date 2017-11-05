@@ -17,6 +17,7 @@ let rOfRndmPoint = 0.0015
 
 var (startLong, startLat) : (Double, Double) = (0.0, 0.0)
 var (newLat, newLong) : (Double, Double) = (0.0, 0.0)
+var (latitude, longitude) : (Double, Double) = (0.0, 0.0)
 var counter = 0
 var active = 0
 
@@ -29,7 +30,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager = CLLocationManager()
     var myLocation: CLLocation!
-    var (latitude, longitude) : (Double, Double) = (0.0, 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +78,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 distInd.text = String(Int(floor(distance / 10)) * 10) + " meters away"
                 if distance <= 100 {
                     progress.progress = 1 - Float(distance) / 100.0
+                } else {
+                    progress.progress = 0
                 }
             } else {
                 distInd.textColor = UIColor.black
