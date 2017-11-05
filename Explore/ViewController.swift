@@ -25,6 +25,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var distInd: UILabel!
     @IBOutlet weak var progress: UIProgressView!
+    @IBOutlet weak var solution: UILabel!
     
     var locationManager: CLLocationManager = CLLocationManager()
     var myLocation: CLLocation!
@@ -46,6 +47,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func viewWillAppear() {
+        repeat {
+            (newLat, newLong) = random_location(latitude, longitude, rOfRndmPoint, rOfRndmPoint)
+        } while compute_distance(startLat, startLong, newLat, newLong) > maxDist || compute_distance(startLat, startLong, newLat, newLong) < minDist
+        location.text = String(format: "%.5f", newLat) + ", " + String(format: "%.5f", newLong)
+        panoView.moveNearCoordinate(CLLocationCoordinate2D(latitude: newLat, longitude: newLong))
+    }
+    
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation])
     {
@@ -54,14 +63,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         latitude = latestLocation.coordinate.latitude
         longitude = latestLocation.coordinate.longitude
         
+        location.text = "Your location: (" + String(format: "%.5f", latitude) + ", " + String(format: "%.5f", longitude) + ")"
+        
         if counter == 0 {
             (startLong, startLat) = (longitude, latitude)
             counter += 1
         }
         
+        let distance = compute_distance(newLat, newLong, latitude, longitude)
+        
         if active > 0 {
-            let distance = compute_distance(newLat, newLong, latitude, longitude)
-            
             if distance > 15 {
                 distInd.textColor = UIColor.lightGray
                 distInd.text = String(Int(floor(distance / 10)) * 10) + " meters away"
@@ -78,16 +89,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager,
                          didFailWithError error: Error) {
     }
+ 
     
     @IBAction func generate(_ sender: UIButton) {
         repeat {
             (newLat, newLong) = random_location(latitude, longitude, rOfRndmPoint, rOfRndmPoint)
         } while compute_distance(startLat, startLong, newLat, newLong) > maxDist || compute_distance(startLat, startLong, newLat, newLong) < minDist
-        
-        location.text = String(format: "%.5f", newLat) + ", " + String(format: "%.5f", newLong)
         panoView.moveNearCoordinate(CLLocationCoordinate2D(latitude: newLat, longitude: newLong))
         active = 1
-
     }
+    
+
 }
 

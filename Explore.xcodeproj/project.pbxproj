@@ -17,6 +17,7 @@
 		9709E5EC1FADB43800478E39 /* ExploreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709E5EB1FADB43800478E39 /* ExploreUITests.swift */; };
 		97DBA67E1FAE56190033BD99 /* GView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA67D1FAE56190033BD99 /* GView.swift */; };
 		97DBA6821FAE59710033BD99 /* RndmLct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA6811FAE59710033BD99 /* RndmLct.swift */; };
+		97DBA6861FAECA940033BD99 /* title.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 97DBA6851FAECA930033BD99 /* title.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9709E5ED1FADB43800478E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97DBA67D1FAE56190033BD99 /* GView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GView.swift; sourceTree = "<group>"; };
 		97DBA6811FAE59710033BD99 /* RndmLct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RndmLct.swift; sourceTree = "<group>"; };
+		97DBA6851FAECA930033BD99 /* title.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = title.JPG; sourceTree = "<group>"; };
 		C56DB8B4F608A12F2CFDB3F3 /* Pods-Explore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Explore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Explore/Pods-Explore.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C43C3FFE18E5A0319D2EF /* libPods-Explore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Explore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 		9709E5CA1FADB43800478E39 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				97DBA6851FAECA930033BD99 /* title.JPG */,
 				9709E5CB1FADB43800478E39 /* AppDelegate.swift */,
 				9709E5CD1FADB43800478E39 /* ViewController.swift */,
 				97DBA67D1FAE56190033BD99 /* GView.swift */,
@@ -268,6 +271,7 @@
 			files = (
 				9709E5D61FADB43800478E39 /* LaunchScreen.storyboard in Resources */,
 				9709E5D31FADB43800478E39 /* Assets.xcassets in Resources */,
+				97DBA6861FAECA940033BD99 /* title.JPG in Resources */,
 				9709E5D11FADB43800478E39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
