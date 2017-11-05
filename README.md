@@ -6,7 +6,7 @@ Abenteuer, meaning Adventure in German, is an iOS app based on existing map and 
 ## How to play?
 Press "Let's go!" to let the app randomly find a spot near you and present you the 3D Street View of it. Simply walk around and look for that place, and once you arrive at the correct location, a winning message will be shown. If that's the case, Congrats! Don't forget to share it with your friends via Facebook or Twitter! You can also keep playing by pressing "Let's go!" again!
 
-If you cannot find the place, click the ```"I can't find it >_<"``` button so the route from your current location to the destination will pop up.
+If you cannot find the place, click the ```"I can't find it >_<"``` button so the 2D map will pop up and the destination will be pointed out to you.
 
 ## How does it work?
 The app utilizes Google Map SDK for iOS application, iOS GPS and location service, and facebook / twitter authentification service.
