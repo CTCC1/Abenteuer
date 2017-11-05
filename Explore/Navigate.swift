@@ -7,45 +7,27 @@
 //
 
 import UIKit
-import MapKit
+import GoogleMaps
 
-class Navigate: UIViewController, MKMapViewDelegate {
-    @IBOutlet weak var map: MKMapView!
+var (viewLat, viewLong) : (Double, Double) = (0.0, 0.0)
+
+class Navigate: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
         
-        let request = MKDirectionsRequest()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: newLat, longitude: newLong), addressDictionary: nil))
-        request.requestsAlternateRoutes = true
-        request.transportType = .walking
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 17.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.isMyLocationEnabled = true
+        view = mapView
         
-        let directions = MKDirections(request: request)
-        
-        directions.calculate { [unowned self] response, error in
-            guard let unwrappedResponse = response else { return }
-            
-            for route in unwrappedResponse.routes {
-                self.map.add(route.polyline)
-                self.map.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-            }
-        }
-        
-        map.delegate = self
-        map.showsUserLocation = true
-    
-        
-        
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: destLat, longitude: destLong)
+        marker.title = "Dest"
+        marker.map = mapView
         
     }
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
-        renderer.strokeColor = UIColor.blue
-        renderer.lineWidth = 8.0
-        return renderer
-    }
 
     
 }

@@ -70,7 +70,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             counter += 1
         }
         
-        let distance = compute_distance(newLat, newLong, latitude, longitude)
+        let distance = compute_distance(destLat, destLong, latitude, longitude)
         
         if active > 0 {
             if distance > 15 {
