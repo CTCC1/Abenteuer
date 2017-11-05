@@ -29,6 +29,6 @@ How to develop iOS App using Swift. Implement module APIs  and SDKs.
 
 We will work on a scoreboard and a timer mode for each spot generated, so you can compete with other players on how familiar you are with your surroundings! We will also implement a "share button" to let the world see all the cool places our players have discovered!
 
-A video Demo
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=gdFPyDS5Ioo)
+
+[![A Video Demo](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=gdFPyDS5Ioo)
